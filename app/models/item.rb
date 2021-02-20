@@ -17,4 +17,11 @@ class Item < ApplicationRecord
     validates :shipping_day
   end
 
+  with_options presence: true do
+    validates :name
+    validates :description
+    validates :image
+    validates :price
+  end
+
 end
